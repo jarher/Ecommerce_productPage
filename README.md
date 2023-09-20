@@ -13,6 +13,8 @@ Users should be able to:
 - Add items to the cart
 
 - View the cart and remove items from it
+
+-Demo https://jarher.github.io/Ecommerce_productPage/
   
 ![mobile-menu](https://github.com/jarher/Ecommerce_productPage/assets/7361853/ac623278-5f72-4a28-854f-17efe702d52b)
 ![mobile-design-basket-filled](https://github.com/jarher/Ecommerce_productPage/assets/7361853/29119194-7036-42ed-ab8f-fc526d2e9b5a)
