@@ -1,4 +1,4 @@
-import productData from "./productData.js";
+import productData from "../productData.js";
 import { cart_product, checkoutButton } from "./templates.js";
 import {
   addClass,

@@ -13,7 +13,7 @@ import {
   img_lightbox_clicked,
 } from "./slider.js";
 import { removeClass, selectElement, toggleClass } from "./utils.js";
-import { renderContent, renderProductData } from "./render_content.js";
+import { renderContent } from "./render_content.js";
 
 document.addEventListener("click", (e) => {
   if (e.target.className === "menu-btn") {

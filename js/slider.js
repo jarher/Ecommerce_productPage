@@ -1,4 +1,4 @@
-import productData from "./productData.js";
+import productData from "../productData.js";
 import {
   addClass,
   include_to_DOM,

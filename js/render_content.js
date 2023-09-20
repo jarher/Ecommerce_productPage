@@ -4,7 +4,7 @@ import {
   renderCartProducts,
   showShoppingCartBadge,
 } from "./addProduct.js";
-import productData from "./productData.js";
+import productData from "../productData.js";
 import {
   product_template,
   slider_imgs,
