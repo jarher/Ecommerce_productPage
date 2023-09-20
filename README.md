@@ -1,4 +1,4 @@
-This project is an e-commerce product page made with html, jacascript and Sass.
+This project is an e-commerce product page made with html, javascript and Sass.
 
 Users should be able to:
 
