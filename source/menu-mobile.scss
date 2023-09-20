@@ -1,0 +1,61 @@
+$White: hsl(0, 0%, 100%);
+$Very-dark-blue: hsl(220, 13%, 13%);
+
+@mixin padding-left-10() {
+  padding-left: 10%;
+}
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  transition: all 0.3s ease-in-out;
+
+  .container {
+    position: relative;
+    background-color: $White;
+    width: 75%;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+    .close-btn-wrapper {
+      margin-bottom: 2%;
+      height: 10vh;
+      @include padding-left-10;
+      padding-top: 10%;
+      .close-menu {
+        background: url("../images/icon-close.svg") top center/cover;
+        width: 16px;
+        height: 16px;
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .menu-content {
+      @include padding-left-10;
+      ul {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          a {
+            display: block;
+            text-decoration: none;
+            color: $Very-dark-blue;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.menu-container-move {
+  transform: translateX(0%)!important;
+}

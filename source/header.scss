@@ -1,0 +1,143 @@
+$White: hsl(0, 0%, 100%);
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+
+@mixin row-flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin width-height-22px() {
+  height: 22px;
+  width: 22px;
+}
+@mixin display-block() {
+  display: block;
+}
+@mixin cursor-pointer() {
+  cursor: pointer;
+}
+@mixin icons-properties() {
+  @include width-height-22px;
+  @include display-block;
+  @include cursor-pointer;
+}
+header {
+  @include row-flex;
+  position: relative;
+  height: 10vh;
+  padding: 16px;
+  .left {
+    @include row-flex;
+    gap: 10px;
+    .menu-btn {
+      background: url("../images/icon-menu.svg") no-repeat top center/cover;
+      @include icons-properties;
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+    .brand {
+      font-size: 2rem;
+      font-weight: bold;
+      @media (min-width: 1024px) {
+        margin: 0;
+        font-size: 2.2rem;
+      }
+    }
+    .menu-desktop {
+      display: none;
+      ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        li {
+          a {
+            height: 100%;
+            line-height: 15vh;
+            text-decoration: none;
+            display: block;
+            color: $Grayish-blue;
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            &:hover {
+              color: $Dark-grayish-blue;
+              border-bottom: 3px solid $Orange;
+            }
+          }
+          @media (min-width: 1024px) {
+            display: flex;
+            height: 100%;
+            align-items: center;
+          }
+        }
+        @media (min-width: 1024px) {
+          height: 100%;
+          align-items: center;
+        }
+      }
+      @media (min-width: 1024px) {
+        display: flex;
+        height: 15vh;
+        align-items: center;
+      }
+    }
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+  }
+  .right {
+    @include row-flex;
+    gap: 20px;
+    .shopping-cart-wrapper {
+      position: relative;
+      .shopping-cart-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        border-radius: 6px;
+        background-color: $Orange;
+        color: $Pale-orange;
+        width: 15px;
+        height: 15px;
+        line-height: 16px;
+        text-align: center;
+        padding: 7%;
+        font-size: 0.8rem;
+        display: none;
+        transition: all 0.2s ease-in-out;
+      }
+      .shopping-cart {
+        @include icons-properties;
+        background-color: $White;
+        background: url("../images/icon-cart.svg") no-repeat center center/cover;
+      }
+    }
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      @include cursor-pointer;
+      transition: all 0.2s ease-in-out;
+      box-sizing: border-box;
+      &:hover {
+        border: 2px solid $Orange;
+      }
+    }
+    @media (min-width: 768px) {
+      gap: 30px;
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 16px 20px;
+    border-bottom: 1px solid $Grayish-blue;
+  }
+  @media (min-width: 1024px) {
+    align-items: baseline;
+    padding: 0;
+    height: auto;
+  }
+}

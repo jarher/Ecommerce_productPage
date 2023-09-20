@@ -1,0 +1,108 @@
+$Orange: hsl(26, 100%, 55%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+
+@mixin button-properties() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: $Light-grayish-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+@mixin icon-properties() {
+  width: 50%;
+  height: 50%;
+}
+.slider {
+  padding: 0;
+  width: 100%;
+  .slider-wrapper {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+    .previous-img {
+      @include button-properties;
+      left: 20px;
+      .previous-icon {
+        background: url("../images/icon-previous.svg") no-repeat center /
+          contain;
+        @include icon-properties;
+      }
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+    .next-img {
+      @include button-properties;
+      right: 20px;
+      .next-icon {
+        background: url("../images/icon-next.svg") no-repeat center / contain;
+        @include icon-properties;
+      }
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+    .slider-img-container {
+      display: flex;
+      transition: all 0.3s ease-in-out;
+      img {
+        width: 100%;
+        @media (min-width: 1024px) {
+          cursor: pointer;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      height: 85vh;
+    }
+    @media (min-width: 1024px) {
+      flex: 1;
+      height: auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  .slider-thumbnails {
+    display: none;
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5%;
+      .thumb-cont {
+        border-radius: 10px;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 20%;
+        height: 20%;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.3;
+            background-color: $Light-grayish-blue;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    flex: 0 1 29%;
+  }
+}
+.thumbnail-active {
+  border: 3px solid $Orange;
+}
+.img-opaque {
+  opacity: 0.3;
+  background-color: $Light-grayish-blue;
+}

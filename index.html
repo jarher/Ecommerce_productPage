@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="./build/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="modal-slider">
+      <div class="modal-slider-content opacity-0">
+
+        <button class="close-modal-slider">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" id="close-slider-modal">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="" fill-rule="evenodd" id="cls-slider-modal" />
+          </svg>
+        </button>
+
+        <div class="slider">
+          <button class="previous-img" data-type="modal-slider">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" class="previous-icon" data-type="modal-slider">
+              <path d="M11 1 3 9l8 8" stroke="" stroke-width="3" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
+          <button class="next-img" data-type="modal-slider">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" class="next-icon" data-type="modal-slider">
+              <path d="m2 1 8 8-8 8" stroke="" stroke-width="3" fill="none" fill-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="slider-wrapper">
+            <div class="slider-img-container">
+            </div> 
+          </div>
+          <div class="slider-thumbnails">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="menu-mobile">
+      <div class="container">
+        <div class="close-btn-wrapper">
+          <span class="close-menu"></span>
+        </div>
+        <nav class="menu-content">
+          <ul>
+            <li><a href="">Collections</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+    <header>
+      <div class="left">
+        <span class="menu-btn"></span>
+        <h1 class="brand">sneakers</h1>
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="">Collections</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right">
+        <div class="shopping-cart-wrapper">
+          <span class="shopping-cart-badge"></span>
+          <span class="shopping-cart"></span>
+        </div>
+        <img src="./images/image-avatar.png" alt="user avatar" class="user-avatar">
+      </div>
+      <div class="cart-basket">
+        <div class="cart-header">
+          <div class="cart-title">Cart</div>
+        </div>
+        <div class="cart-body">
+          <!-- Your cart is empty
+          <div class="cart-product">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" class="cart-img-product">
+            <div class="cart-product-description">
+              Fall Limited Edition Sneakers $125.00 x 3
+              <span class="cart-total">$375.00</span>
+            </div>
+            <span class="cart-delete" data-id="0"></span>
+          </div>
+
+          <button class="cart-checkout-btn">Checkout</button> -->
+        </div>
+      </div>
+    </header>
+    <section class="product">
+      <div class="slider">
+        <div class="slider-wrapper">
+          <button class="previous-img" data-type="section-slider">
+            <span class="previous-icon" data-type="section-slider"></span>
+          </button>
+          <button class="next-img" data-type="section-slider">
+            <span class="next-icon" data-type="section-slider"></span>
+          </button>
+          <div class="slider-img-container">
+          </div>
+        </div>
+        <div class="slider-thumbnails">
+        </div>
+      </div>
+      <div class="product-container">
+      </div>
+    </section>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Jeffer Andrés Rojas</a>.
+  </div>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

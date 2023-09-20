@@ -1,0 +1,83 @@
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$Orange: hsl(26, 100%, 55%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+
+@mixin button-slider-properties() {
+  position: absolute;
+  top: -45px;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin icon-properties() {
+  stroke: $Dark-grayish-blue;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    stroke: $Orange;
+  }
+}
+.modal-slider {
+  display: none;
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    .modal-slider-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: 100%;
+      margin: auto;
+      transition: all 0.3 ease-in-out;
+      .close-modal-slider {
+        display: flex;
+        align-self: end;
+        width: fit-content;
+        padding: 2%;
+        margin-bottom: 10px;
+        background-color: transparent;
+        #close-slider-modal {
+          cursor: pointer;
+          fill: $Light-grayish-blue;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            fill: $Orange;
+          }
+        }
+      }
+
+      .slider {
+        width: 100%;
+        position: relative;
+        .previous-img {
+          @include button-slider-properties;
+          left: -15px;
+          .previous-icon {
+            @include icon-properties;
+          }
+        }
+        .next-img {
+          @include button-slider-properties;
+          right: -15px;
+          .next-icon {
+            @include icon-properties;
+          }
+        }
+      }
+    }
+  }
+}

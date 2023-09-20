@@ -1,0 +1,167 @@
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+
+@mixin font-size-md() {
+  font-size: 1.5rem;
+}
+@mixin font-size-xs() {
+  font-size: 0.825rem;
+}
+@mixin color-orange() {
+  color: $Orange;
+}
+@mixin font-weight-seven() {
+  font-weight: 700;
+}
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+.product {
+  @include flex-column;
+  margin-bottom: 10%;
+  gap: 20px;
+  .product-container {
+    padding: 0 5%;
+    @include font-weight-seven;
+    .product-info {
+      .company-title {
+        font-size: 1.1rem;
+        @include color-orange;
+      }
+      .product-title {
+        @include font-size-md;
+        font-weight: bold;
+        @media (min-width: 1024px) {
+          font-size: 2.6rem;
+          margin: 10px 0;
+        }
+      }
+      .product-description {
+        font-size: 1rem;
+        color: $Dark-grayish-blue;
+      }
+      @media (min-width:1024px) {
+        margin-top: 5%;
+      }
+    }
+    .purchase-details {
+      @include flex-column;
+      gap: 20px;
+      .price-details {
+        @include flex-center;
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          .price-discount {
+            @include font-size-md;
+          }
+          .discount-value {
+            background-color: $Pale-orange;
+            @include color-orange;
+            @include font-size-xs;
+            border-radius: 5px;
+            padding: 2%;
+          }
+        }
+        .right {
+          .initial-price {
+            @include font-size-xs;
+            color: $Grayish-blue;
+            text-decoration: line-through;
+            @media (min-width:1024px) {
+              font-size: 0.925rem;
+              margin-top: 25px;
+            }
+          }
+        }
+        @media (min-width:1024px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      .quantity {
+        @include flex-column;
+        gap: 10px;
+        .quantity-content {
+          background-color: $Light-grayish-blue;
+          flex: 1 1 100%;
+          display: flex;
+          align-items: center;
+          padding: 15px;
+          border-radius: 10px;
+          .quantity-plus {
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            background: url("../images/icon-plus.svg") no-repeat center / cover;
+            @media (min-width: 768px) {
+              width: 15px;
+              height: 15px;
+            }
+          }
+          .quantity-value {
+            flex: 3;
+            text-align: center;
+          }
+          .quantity-minus {
+            width: 10px;
+            height: 5px;
+            cursor: pointer;
+            background: url("../images/icon-minus.svg") no-repeat center / cover;
+            @media (min-width: 768px) {
+              width: 15px;
+            }
+          }
+          @media (min-width: 1024px) {
+            padding: 10px;
+            flex: 1 1 60%;
+          }
+        }
+        .buy-product-btn {
+          @include flex-center;
+          @include font-weight-seven;
+          flex: 1 1 100%;
+          color: $White;
+          gap: 10px;
+          background-color: $Orange;
+          border-radius: 10px;
+          border: none;
+          padding: 5%;
+          font-size: 1rem;
+          @media (min-width: 768px) {
+            padding: 3%;
+          }
+          &:disabled{
+            background-color: hsl(26, 100%, 55%, 0.55);
+          }
+        }
+        @media (min-width: 1024px) {
+          flex-direction: row;
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      flex: 1 1 40%;
+      padding: 0;
+    }
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 8% 0;
+    gap: 100px;
+    margin-bottom: 0;
+  }
+}
