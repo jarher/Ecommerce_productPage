@@ -13,5 +13,15 @@ Users should be able to:
 - Add items to the cart
 
 - View the cart and remove items from it
-
+  
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\active-states-basket-empty.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\active-states-basket-filled.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\active-states-lightbox.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\desktop-design-lightbox.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\desktop-design.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\desktop-preview.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\mobile-design-basket-empty.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\mobile-design-basket-filled.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\mobile-design.jpg
+C:\Users\jeffr\Desktop\PROYECTOS JAVASCRIPT\ecommerce-product-page-main\design\mobile-menu.jpg
 
