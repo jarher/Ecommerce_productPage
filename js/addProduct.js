@@ -1,5 +1,4 @@
 import productData from "./productData.js";
-import { renderProductData } from "./render_content.js";
 import { cart_product, checkoutButton } from "./templates.js";
 import {
   addClass,
